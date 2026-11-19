@@ -72,7 +72,7 @@ window.ATHLETE = {
   videos: [
     {
       title: "Melhores momentos da temporada",
-      category: "Highlights",
+      category: "Melhores momentos",
       duration: "03:25",
       date: "Temporada atual",
       url: "",

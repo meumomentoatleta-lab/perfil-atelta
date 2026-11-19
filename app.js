@@ -121,7 +121,7 @@
       markup += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#40505d" stroke-width="1"/>`;
     });
     const values = items.map((item,i) => point(i,clamp(item.value)/100).join(",")).join(" ");
-    markup += `<polygon points="${values}" fill="#d7ff43" fill-opacity=".22" stroke="#d7ff43" stroke-width="2.5"/>`;
+    markup += `<polygon points="${values}" fill="#1c49ab" fill-opacity=".22" stroke="#1c49ab" stroke-width="2.5"/>`;
     items.forEach((item,i) => {
       const [x,y] = point(i,1.22);
       const anchor = x < cx-8 ? "end" : x > cx+8 ? "start" : "middle";
