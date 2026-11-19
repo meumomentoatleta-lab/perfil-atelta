@@ -70,6 +70,22 @@
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeLightbox(); });
 
   const videos = a.videos || [];
+  function getYouTubeVideoId(value) {
+    try {
+      const url = new URL(value);
+      const host = url.hostname.replace(/^www\./, "");
+      if (host === "youtu.be") return validVideoId(url.pathname.slice(1).split("/")[0]);
+      if (host !== "youtube.com" && host !== "m.youtube.com" && host !== "youtube-nocookie.com") return "";
+      const parts = url.pathname.split("/").filter(Boolean);
+      const id = parts[0] === "watch" ? url.searchParams.get("v") : parts[0] === "embed" || parts[0] === "shorts" || parts[0] === "live" ? parts[1] : "";
+      return validVideoId(id);
+    } catch {
+      return "";
+    }
+  }
+  function validVideoId(value) {
+    return typeof value === "string" && /^[\w-]{11}$/.test(value) ? value : "";
+  }
   const categories = ["Todos", ...new Set(videos.map(v => v.category).filter(Boolean))];
   let activeCategory = "Todos";
   $("videoFilters").innerHTML = categories.map((cat, i) => `<button type="button" class="filter-btn ${i === 0 ? "active" : ""}" data-category="${cat}">${cat}</button>`).join("");
@@ -85,12 +101,29 @@
     $("videoCount").textContent = `${filtered.length} ${filtered.length === 1 ? "VÍDEO" : "VÍDEOS"}`;
     $("videoGrid").innerHTML = filtered.length ? filtered.map(v => `
       <article class="video-card">
-        <a class="video-thumb" href="${v.url || "#"}" ${v.url ? 'target="_blank" rel="noopener"' : 'data-no-video="true"'} aria-label="Assistir ${v.title}">
-          <span class="video-type">${v.category || "VÍDEO"}</span><span class="play">▶</span><span class="video-duration">${v.duration || ""}</span>
-        </a>
-        <div class="video-details"><div><strong>${v.title}</strong><small>${v.date || ""}</small></div><a class="video-open" href="${v.url || "#"}" ${v.url ? 'target="_blank" rel="noopener"' : 'data-no-video="true"'}>Assistir ↗</a></div>
+        <button class="video-thumb" type="button" data-video-id="${getYouTubeVideoId(v.url)}" aria-label="Reproduzir: ${v.title}">
+          ${v.thumbnail ? `<img class="video-thumbnail" src="${v.thumbnail}" alt="" loading="lazy">` : getYouTubeVideoId(v.url) ? `<img class="video-thumbnail" src="https://img.youtube.com/vi/${getYouTubeVideoId(v.url)}/hqdefault.jpg" alt="" loading="lazy">` : ""}
+          <span class="video-type">${v.category || "VÍDEO"}</span><span class="play" aria-hidden="true">▶</span><span class="video-duration">${v.duration || ""}</span>
+        </button>
+        <div class="video-details"><div><strong>${v.title}</strong><small>${v.date || ""}</small></div><button class="video-open" type="button" data-video-id="${getYouTubeVideoId(v.url)}">Assistir ▶</button></div>
       </article>`).join("") : `<div class="empty-videos">Nenhum vídeo cadastrado nesta categoria.</div>`;
-    $("videoGrid").querySelectorAll("[data-no-video]").forEach(el => el.addEventListener("click", e => { e.preventDefault(); showToast("Adicione o link do YouTube deste vídeo em data.js"); }));
+    $("videoGrid").querySelectorAll("[data-video-id]").forEach(button => button.addEventListener("click", () => {
+      const card = button.closest(".video-card");
+      const videoId = button.dataset.videoId;
+      if (!videoId) { showToast("Adicione uma URL válida do YouTube em data.js"); return; }
+      const thumbnail = card.querySelector(".video-thumb");
+      if (!thumbnail) return;
+      const player = document.createElement("iframe");
+      player.className = "video-player";
+      player.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+      player.title = `Reprodutor de vídeo: ${card.querySelector(".video-details strong").textContent}`;
+      player.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      player.referrerPolicy = "strict-origin-when-cross-origin";
+      player.allowFullscreen = true;
+      thumbnail.replaceWith(player);
+      const playLink = card.querySelector(".video-open");
+      if (playLink) playLink.remove();
+    }));
   }
   renderVideos();
 
