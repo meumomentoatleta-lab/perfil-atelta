@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil esportivo de João Santos. Currículo, características, conquistas, fotos e vídeos.">
+  <meta name="theme-color" content="#10151d">
+  <title>João Santos | Perfil do Atleta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-line"></div>
+  <header class="hero">
+    <div class="hero-photo" id="heroPhoto" aria-hidden="true"></div>
+    <div class="hero-shade"></div>
+    <nav class="top-nav wrap">
+      <a class="brand" href="#" aria-label="Página inicial"><span class="brand-mark">MA</span><span>MOMENTO<span class="brand-light">ATLETA</span></span></a>
+      <button class="share-button" id="shareButton" type="button"><span>↗</span> Compartilhar perfil</button>
+    </nav>
+    <div class="hero-content wrap">
+      <div class="hero-copy">
+        <p class="eyebrow" id="heroEyebrow">PERFIL DO ATLETA <span></span> FUTEBOL</p>
+        <h1 id="athleteName">JOÃO SANTOS</h1>
+        <p class="hero-role" id="athleteRole">ATACANTE <i>•</i> FUTEBOL PROFISSIONAL</p>
+        <div class="hero-meta">
+          <span id="clubBadge">EC SÃO BERNARDO</span>
+          <span id="locationBadge">SÃO PAULO, SP</span>
+        </div>
+      </div>
+      <div class="overall-card">
+        <span class="overall-label">GERAÇÃO</span>
+        <strong id="overallScore">2015</strong>
+        <span class="overall-caption"></span>
+      </div>
+    </div>
+    <div class="hero-bottom wrap"><span>CURRÍCULO ESPORTIVO DIGITAL</span><span id="updatedLabel">PERFIL • 2026</span></div>
+  </header>
+
+  <main class="wrap main-content">
+    <section class="intro section" id="sobre">
+      <div class="section-heading"><div><p class="eyebrow">01 / APRESENTAÇÃO</p><h2>Conheça o atleta</h2></div><span class="section-index">01</span></div>
+      <div class="intro-grid">
+        <div class="portrait-wrap">
+          <div class="portrait" id="portrait"><span>JS</span></div>
+          <div class="portrait-caption"><strong id="portraitName">JOÃO SANTOS</strong><small id="portraitPosition">ATACANTE • 9</small></div>
+        </div>
+        <div class="intro-info">
+          <p class="quote" id="athleteBio">Atacante com passagem pela base do Corinthians e experiência no futebol paulista. Jogador de presença ofensiva, mobilidade e capacidade de finalização.</p>
+          <div class="quick-facts" id="quickFacts"></div>
+          <div class="tags" id="strengthTags"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="atributos">
+      <div class="section-heading"><div><p class="eyebrow">02 / SCOUTING CARD</p><h2>Características do atleta</h2></div><span class="section-index">02</span></div>
+      <div class="attributes-layout">
+        <div class="radar-panel">
+          <div class="panel-top"><div><span class="mini-label">PLAYER ANALYSIS</span><h3>Mapa de atributos</h3></div><span class="sample-tag">DADOS ILUSTRATIVOS</span></div>
+          <div class="radar-holder"><svg id="radarChart" viewBox="0 0 420 360" role="img" aria-label="Gráfico radar dos atributos do atleta"></svg></div>
+          <p class="chart-note">Pontuações de exemplo. Edite os valores conforme avaliação técnica, scout ou dados de desempenho do atleta.</p>
+        </div>
+        <div class="stats-panel">
+          <div class="panel-top"><div><span class="mini-label">ATTRIBUTE RATINGS</span><h3>Detalhamento</h3></div><span class="rating-scale">0—100</span></div>
+          <div id="attributeBars" class="attribute-bars"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="carreira">
+      <div class="section-heading"><div><p class="eyebrow">03 / TRAJETÓRIA</p><h2>Carreira e conquistas</h2></div><span class="section-index">03</span></div>
+      <div class="career-grid">
+        <div class="content-panel">
+          <div class="panel-title"><span class="title-icon">▤</span><div><span class="mini-label">HISTÓRICO</span><h3>Clubes e categorias</h3></div></div>
+          <div class="timeline" id="careerTimeline"></div>
+        </div>
+        <div class="content-panel">
+          <div class="panel-title"><span class="title-icon trophy">★</span><div><span class="mini-label">RESULTADOS</span><h3>Títulos e conquistas</h3></div></div>
+          <div class="achievement-list" id="achievements"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="section-heading"><div><p class="eyebrow">04 / EM CAMPO</p><h2>Galeria de imagens</h2></div><span class="section-index">04</span></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <div class="section-footer"><span>REGISTROS DO ATLETA</span><a id="allPhotosLink" href="#" target="_blank" rel="noopener">Ver galeria completa ↗</a></div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="section-heading"><div><p class="eyebrow">05 / VÍDEOS</p><h2>Vídeos e melhores momentos</h2></div><span class="section-index">05</span></div>
+      <div class="video-intro"><p>Assista a lances, jogos e momentos que mostram o estilo de jogo do atleta.</p><span class="video-count" id="videoCount">0 VÍDEOS</span></div>
+      <div class="video-filters" id="videoFilters" role="group" aria-label="Filtrar vídeos"></div>
+      <div class="video-grid" id="videoGrid"></div>
+    </section>
+
+    <section class="contact-section">
+      <div><p class="eyebrow">CONTATO PROFISSIONAL</p><h2>Vamos conversar?</h2><p>Entre em contato para informações, propostas e oportunidades.</p></div>
+      <div class="contact-actions"><a class="contact-button" id="contactButton" href="mailto:contato@exemplo.com">Falar com o atleta <span>↗</span></a><a class="social-link" id="instagramLink" href="#" target="_blank" rel="noopener">Instagram ↗</a></div>
+    </section>
+    <footer class="footer"><a class="brand footer-brand" href="#"><span class="brand-mark">MA</span><span>MOMENTO<span class="brand-light">ATLETA</span></span></a><span>PERFIL ESPORTIVO DIGITAL</span><span>© <span id="year"></span> • TODOS OS DIREITOS RESERVADOS</span></footer>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">×</button>
+    <button class="lightbox-arrow prev" id="lightboxPrev" aria-label="Foto anterior">‹</button>
+    <img id="lightboxImage" src="" alt="">
+    <button class="lightbox-arrow next" id="lightboxNext" aria-label="Próxima foto">›</button>
+    <p id="lightboxCaption"></p>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
