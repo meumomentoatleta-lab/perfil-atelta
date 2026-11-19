@@ -19,7 +19,7 @@ window.ATHLETE = {
   nationality: "Brasileiro",
   email: "contato@exemplo.com",
   instagram: "https://www.instagram.com/",
-  instagramLabel: "@joaosantos9",
+  instagramLabel: "@xxx",
   bio: "Atacante com passagem pela base do Corinthians e experiência no futebol paulista. Jogador de presença ofensiva, mobilidade e capacidade de finalização. Este texto pode ser substituído por uma apresentação escrita pelo próprio atleta ou por sua assessoria.",
   strengths: [
     "Finalização",
