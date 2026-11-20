@@ -42,7 +42,7 @@ const achievementHistory = [
   },
   {
     title: "Copa Caruaru - Fut 7",
-    detail: "2º lugar ouro Sub-09 (2023)",
+    detail: "2º lugar ouro Sub-09 (2024)",
   },
   {
     title: "Copa Tronadon de Base - Futsal",
