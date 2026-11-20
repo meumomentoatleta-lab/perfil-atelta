@@ -79,7 +79,7 @@ window.ATHLETE = {
   email: "",
   instagram: "",
   instagramLabel: "Instagram",
-  bio: "Atleta de Futsal e Futebol 7, atuando como Ala/Lateral e Pivô/Meio-campo pelo Náutico na categoria Sub-11. Destaca-se pela velocidade, agilidade, coordenação motora e capacidade de organizar as jogadas, com preferência por assistências, finalizações e controle de bola.",
+  bio: "Atleta de Futsal e Futebol 7, atuando como Ala/Lateral esquerdo pelo futsal do Náutico. Destaca-se pela velocidade, agilidade, coordenação motora e capacidade de organizar as jogadas, com preferência por assistências, finalizações e controle de bola.",
   strengths: [
     "Velocidade",
     "Resistência",
