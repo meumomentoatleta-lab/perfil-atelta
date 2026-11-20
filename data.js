@@ -90,7 +90,7 @@ window.ATHLETE = {
   ],
   overall: 2015,
   updated: "ATUALIZADO EM 19/11/2026",
-  heroImage: "images/capa.jpg",
+  heroImage: "images/capa.png",
   portraitImage: "images/3x4.jpg",
   attributes: [
     { name: "Finalização", value: 60, groups: ["attack"] },
@@ -144,7 +144,7 @@ window.ATHLETE = {
     },
     {
       title: "ELO x CVI - U11 — Highlights",
-      category: "Escolar",
+      category: "Melhores momentos",
       duration: "01:22",
       date: "2025",
       url: "https://www.youtube.com/watch?v=VoJayuGKy8s&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=6",
