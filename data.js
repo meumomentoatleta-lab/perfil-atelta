@@ -4,6 +4,21 @@
   - Vídeos: informe o link completo do YouTube em url. O botão abre o vídeo em nova aba.
   - Atributos: notas de 0 a 100. Use avaliação técnica real; as notas abaixo são apenas demonstração.
 */
+const careerHistory = [
+  {
+    period: "2024 — 2025",
+    club: "Retrô",
+    category: "Categoria Sub-09",
+    logo: "escudos/retro.png",
+  },
+  {
+    period: "2025 — ATUAL",
+    club: "Náutico",
+    category: "Categorias Sub-10, Sub-11",
+    logo: "escudos/logoNautico.png",
+  },
+];
+
 window.ATHLETE = {
   name: "Pietro Yamal",
   role: "Ala / Lateral / Pivô / Meio-campo",
@@ -45,13 +60,7 @@ window.ATHLETE = {
     { name: "Precisão", value: 86, groups: ["attack"] },
     { name: "Assistência", value: 89, groups: ["attack"] },
   ],
-  career: [
-    {
-      period: "2023 — ATUAL",
-      club: "Náutico",
-      category: "Categoria Sub-11",
-    },
-  ],
+  career: careerHistory,
   achievements: [],
   gallery: [
     { image: "", caption: "Em campo" },

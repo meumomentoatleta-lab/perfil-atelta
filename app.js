@@ -49,7 +49,7 @@
     return `<div class="attribute-row"><span class="attribute-name">${item.name}</span><div class="bar-track"><div class="bar-fill" style="width:${value}%"></div></div><span class="attribute-value">${value}</span></div>`;
   }).join("");
 
-  $("careerTimeline").innerHTML = (a.career || []).map(item => `<div class="timeline-item"><span class="timeline-period">${item.period}</span><strong>${item.club}</strong><small>${item.category || ""}</small></div>`).join("");
+  $("careerTimeline").innerHTML = (a.career || []).map(item => `<div class="timeline-item"><span class="timeline-period">${item.period}</span><div class="timeline-club">${item.logo ? `<img src="${item.logo}" alt="" aria-hidden="true" loading="lazy">` : ""}<strong>${item.club}</strong></div><small>${item.category || ""}</small></div>`).join("");
   $("achievements").innerHTML = (a.achievements || []).map(item => `<div class="achievement"><span class="achievement-star">★</span><div><strong>${item.title}</strong><small>${item.detail || ""}</small></div></div>`).join("");
 
   const gallery = a.gallery || [];
