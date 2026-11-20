@@ -35,6 +35,33 @@ const careerHistory = [
   },
 ];
 
+const achievementHistory = [
+  {
+    title: "Copa Caruaru - Fut 7",
+    detail: "Campeão prata Sub-08 (2023)",
+  },
+  {
+    title: "Copa Caruaru - Fut 7",
+    detail: "2º lugar ouro Sub-09 (2023)",
+  },
+  {
+    title: "Copa Tronadon de Base - Futsal",
+    detail: "Campeão Sub-10 (2025)",
+  },
+  {
+    title: "Liga HD de Futsal",
+    detail: "2º lugar Sub-10 (2025)",
+  },
+  {
+    title: "Copa Pernambuco - Futsal",
+    detail: "Campeão Sub-11 (2026)",
+  },
+  {
+    title: "Liga Pernambucana de Futsal",
+    detail: "Campeão Sub-11 (2026)",
+  },
+];
+
 window.ATHLETE = {
   name: "Pietro Yamal",
   role: "Ala / Lateral / Pivô / Meio-campo",
@@ -77,7 +104,7 @@ window.ATHLETE = {
     { name: "Assistência", value: 90, groups: ["attack"] },
   ],
   career: careerHistory,
-  achievements: [],
+  achievements: achievementHistory,
   gallery: [
     { image: "", caption: "Em campo" },
     { image: "", caption: "Disputa de bola" },
