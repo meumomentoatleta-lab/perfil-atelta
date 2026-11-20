@@ -24,7 +24,7 @@ Informe URLs públicas nos campos `heroImage`, `portraitImage` e `gallery[].imag
 Em cada item de `videos`, preencha `url` com o endereço do vídeo no YouTube. A miniatura é carregada automaticamente e, ao clicar nela ou em “Assistir”, o vídeo é reproduzido na própria página. Se necessário, informe uma miniatura personalizada no campo opcional `thumbnail`.
 
 ### Atributos
-As pontuações são demonstrativas. Combine com o atleta/treinador uma escala objetiva e mantenha o mesmo critério entre atletas. Evite publicar notas como se fossem avaliações oficiais sem validação.
+As pontuações são demonstrativas. Combine com o atleta/treinador uma escala objetiva e mantenha o mesmo critério entre atletas. Evite publicar notas como se fossem avaliações oficiais sem validação. Cada item pode incluir `groups: ["attack"]`, `groups: ["defense"]` ou ambos para aparecer nas duas séries do radar. As séries começam sobrepostas e podem ser ocultadas pelos controles do gráfico.
 
 ## Estrutura
 - `index.html` — estrutura da página

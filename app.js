@@ -36,6 +36,14 @@
 
   const attrs = a.attributes || [];
   renderRadar(attrs);
+  document.querySelectorAll("[data-radar-series]").forEach(button => button.addEventListener("click", () => {
+    const series = button.dataset.radarSeries;
+    const visible = button.getAttribute("aria-pressed") !== "true";
+    button.setAttribute("aria-pressed", String(visible));
+    button.closest(".radar-panel").querySelectorAll(`.radar-series-${series}`).forEach(shape => {
+      shape.classList.toggle("is-hidden", !visible);
+    });
+  }));
   $("attributeBars").innerHTML = attrs.map(item => {
     const value = clamp(item.value);
     return `<div class="attribute-row"><span class="attribute-name">${item.name}</span><div class="bar-track"><div class="bar-fill" style="width:${value}%"></div></div><span class="attribute-value">${value}</span></div>`;
@@ -139,26 +147,50 @@
   function renderRadar(items) {
     const svg = $("radarChart"), cx = 210, cy = 164, radius = 112;
     if (!items.length) return;
-    const n = items.length;
+    const groupsFor = item => Array.isArray(item.groups) ? item.groups : [item.group || "attack"];
+    const axes = items.map((item, index) => ({ item, index, groups: groupsFor(item) }));
+    const groupOrder = { attack: 0, defense: 1 };
+    axes.sort((a, b) => {
+      const aGroup = a.groups.length > 1 ? 2 : groupOrder[a.groups[0]] ?? 0;
+      const bGroup = b.groups.length > 1 ? 2 : groupOrder[b.groups[0]] ?? 0;
+      return aGroup - bGroup || a.index - b.index;
+    });
+    const n = axes.length;
     const point = (i, scale) => {
       const angle = -Math.PI / 2 + (2 * Math.PI * i / n);
       return [cx + Math.cos(angle) * radius * scale, cy + Math.sin(angle) * radius * scale];
     };
     let markup = "";
     [0.25,0.5,0.75,1].forEach(scale => {
-      const pts = items.map((_,i) => point(i,scale).join(",")).join(" ");
-      markup += `<polygon points="${pts}" fill="none" stroke="#40505d" stroke-width="1"/>`;
+      const pts = axes.map((_,i) => point(i,scale).join(",")).join(" ");
+      markup += `<polygon points="${pts}" fill="none" stroke="#d5dde3" stroke-width="1"/>`;
     });
-    items.forEach((item,i) => {
+    axes.forEach(({ item }, i) => {
       const [x,y] = point(i,1);
-      markup += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#40505d" stroke-width="1"/>`;
+      markup += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#d5dde3" stroke-width="1"/>`;
     });
-    const values = items.map((item,i) => point(i,clamp(item.value)/100).join(",")).join(" ");
-    markup += `<polygon points="${values}" fill="#1c49ab" fill-opacity=".22" stroke="#1c49ab" stroke-width="2.5"/>`;
-    items.forEach((item,i) => {
+    [
+      { name: "attack", color: "#1c49ab" },
+      { name: "defense", color: "#db2e2e" },
+    ].forEach(series => {
+      let seriesAxes = axes.filter(axis => axis.groups.includes(series.name));
+      const sharedAxes = seriesAxes.filter(axis => axis.groups.length > 1);
+      const exclusiveAxes = seriesAxes.filter(axis => axis.groups.length === 1);
+      seriesAxes = series.name === "attack"
+        ? [...sharedAxes, ...exclusiveAxes]
+        : [...exclusiveAxes, ...sharedAxes];
+      if (!seriesAxes.length) return;
+      const values = seriesAxes.map(axis => point(axes.indexOf(axis), clamp(axis.item.value) / 100).join(","));
+      markup += `<polygon class="radar-series-${series.name}" points="${cx},${cy} ${values.join(" ")}" fill="${series.color}" fill-opacity=".2" stroke="${series.color}" stroke-width="2.5"/>`;
+      seriesAxes.forEach(axis => {
+        const [x, y] = point(axes.indexOf(axis), clamp(axis.item.value) / 100);
+        markup += `<circle class="radar-series-${series.name}" cx="${x}" cy="${y}" r="3.5" fill="${series.color}"/>`;
+      });
+    });
+    axes.forEach(({ item },i) => {
       const [x,y] = point(i,1.22);
       const anchor = x < cx-8 ? "end" : x > cx+8 ? "start" : "middle";
-      markup += `<text x="${x}" y="${y}" fill="#c3cdd4" font-size="10" text-anchor="${anchor}" dominant-baseline="middle">${item.name}</text>`;
+      markup += `<text x="${x}" y="${y}" fill="#667580" font-size="10" text-anchor="${anchor}" dominant-baseline="middle">${item.name}</text>`;
     });
     svg.innerHTML = markup;
   }
