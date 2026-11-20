@@ -115,12 +115,27 @@ window.ATHLETE = {
   allPhotosUrl: "",
   videos: [
     {
-      title: "Náutico x Sport — melhores momentos",
+      title: "Náutico x Sport — Highlights",
       category: "Melhores momentos",
       duration: "03:25",
-      date: "Temporada atual",
+      date: "2026",
       url: "https://www.youtube.com/watch?v=NFdFnj25VEY",
     },
+    {
+      title: "Benfica U11 — Highlights",
+      category: "Melhores momentos",
+      duration: "05:05",
+      date: "2026",
+      url: "https://www.youtube.com/watch?v=gWrYzZL4HfU&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=5",
+    },
+    {
+      title: "Benfica x Timbu - U12 — Highlights",
+      category: "Melhores momentos",
+      duration: "04:48",
+      date: "2026",
+      url: "https://www.youtube.com/watch?v=hNlwvrL5kq8&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=2",
+    },
+
     {
       title: "Gols — compilado",
       category: "Gols",
