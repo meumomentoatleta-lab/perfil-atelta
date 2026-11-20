@@ -63,7 +63,7 @@ const achievementHistory = [
 ];
 
 window.ATHLETE = {
-  name: "Pietro Yamal",
+  name: "Pietro",
   fullName: "Pietro Teixeira Rodrigues",
   role: "Ala / Lateral / Meio-campo",
   sport: "Futsal e Futebol 7",
