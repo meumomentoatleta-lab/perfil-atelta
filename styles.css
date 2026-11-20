@@ -104,6 +104,9 @@ body { background: #ffffff; }
 .overall-card { background: #ffffff; border-color: #b8c6e8; box-shadow: 0 12px 40px #17212b12; }
 .overall-card strong { color: #1c49ab; }
 .overall-label, .overall-caption { color: #667580; }
+.hero h1, .hero .eyebrow, .hero .hero-role, .hero .hero-role i,
+.hero .hero-meta span, .hero .overall-label, .hero .overall-card strong,
+.hero .overall-caption, .hero .hero-bottom { color: #000000; }
 .section, .footer { border-bottom-color: #e2e7ec; border-top-color: #e2e7ec; }
 .section-index, .footer, .chart-note, .rating-scale, .timeline-item small,
 .achievement small, .section-footer, .video-intro, .video-details small,
