@@ -51,7 +51,7 @@ h2 { margin:0;font:600 38px/.98 var(--display);letter-spacing:.2px; }
 .portrait.has-image img { position:absolute;inset:0;width:100%;height:100%;object-fit:cover; }
 .portrait span { position:absolute;z-index:2;bottom:12px;right:14px;font:700 16px var(--display);color:#ffffffa0; }
 .portrait-caption { position:absolute;bottom:12px;left:13px;z-index:3;display:flex;flex-direction:column;text-shadow:0 2px 8px #000; }
-.portrait-caption strong { font-size:11px;letter-spacing:1px; }.portrait-caption small { color:#d0d7dc;font-size:9px;letter-spacing:1px; }
+.portrait-caption strong { color:#ffffff;font-size:11px;letter-spacing:1px; }.portrait-caption small { color:#d0d7dc;font-size:9px;letter-spacing:1px; }
 .intro-info { min-width:0; }
 .quote { padding:23px 25px;border-left:3px solid var(--accent);background:var(--surface);color:#e0e5e9;font-size:17px;line-height:1.65;margin-bottom:22px; }
 .quick-facts { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 20px; }
@@ -107,9 +107,15 @@ body { background: #ffffff; }
 .overall-card { background: #ffffff; border-color: #b8c6e8; box-shadow: 0 12px 40px #17212b12; }
 .overall-card strong { color: #1c49ab; }
 .overall-label, .overall-caption { color: #667580; }
-.hero h1, .hero .eyebrow, .hero .hero-role, .hero .hero-role i,
+.hero .eyebrow, .hero .hero-role, .hero .hero-role i,
 .hero .hero-meta span, .hero .overall-label, .hero .overall-card strong,
 .hero .overall-caption, .hero .hero-bottom { color: #000000; }
+.hero h1 { color: #ffffff; }
+.section-nav { display:flex;flex-wrap:wrap;justify-content:center;gap:6px;padding:13px 0;border-bottom:1px solid var(--line); }
+.section-nav a { display:inline-flex;align-items:center;gap:7px;padding:8px 11px;color:var(--text);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap;transition:background .2s,color .2s; }
+.section-nav a span { color:var(--accent);font:700 12px var(--display); }
+.section-nav a:hover,.section-nav a:focus-visible { background:var(--surface);color:var(--secondary); }
+.section-nav a:focus-visible { outline:2px solid var(--accent);outline-offset:2px; }
 .section, .footer { border-bottom-color: #e2e7ec; border-top-color: #e2e7ec; }
 .section-index, .footer, .chart-note, .rating-scale, .timeline-item small,
 .achievement small, .section-footer, .video-intro, .video-details small,
