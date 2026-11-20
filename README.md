@@ -17,7 +17,7 @@ O arquivo `data.js` concentra o conteúdo:
 - vídeos categorizados com links do YouTube;
 - contato e Instagram.
 
-Para editar o histórico, adicione ou remova objetos no array `careerHistory` em `data.js`. Cada registro aceita `period`, `club`, `category` e `logo` (caminho ou URL do escudo; opcional).
+Para editar o histórico, adicione ou remova objetos no array `careerHistory` em `data.js`. Cada registro aceita `period`, `club`, `category`, `modality` (por exemplo, `Futsal`, `Fut7` ou `Campo`) e `logo` (caminho ou URL do escudo; opcional).
 
 ### Fotos
 Informe URLs públicas nos campos `heroImage`, `portraitImage` e `gallery[].image`. Se os campos ficarem vazios, a página apresenta blocos visuais de demonstração. Para uma publicação real, hospede as fotos em um serviço/CDN e use os endereços HTTPS.

@@ -6,16 +6,32 @@
 */
 const careerHistory = [
   {
+    period: "2023 — 2024",
+    club: "Geração",
+    category: "Categoria Sub-08",
+    modality: "Futebol 7",
+    logo: "escudos/geracao.jpg",
+  },
+  {
     period: "2024 — 2025",
     club: "Retrô",
     category: "Categoria Sub-09",
+    modality: "Futsal",
     logo: "escudos/retro.png",
   },
   {
     period: "2025 — ATUAL",
     club: "Náutico",
     category: "Categorias Sub-10, Sub-11",
+    modality: "Futsal",
     logo: "escudos/logoNautico.png",
+  },
+  {
+    period: "2025 — ATUAL",
+    club: "Benfica Recife",
+    category: "Categorias Sub-10, Sub-11",
+    modality: "Futebol 7",
+    logo: "escudos/benfica.png",
   },
 ];
 
