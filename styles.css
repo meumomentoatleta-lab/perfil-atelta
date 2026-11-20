@@ -108,8 +108,9 @@ body { background: #ffffff; }
 .overall-card strong { color: #1c49ab; }
 .overall-label, .overall-caption { color: #667580; }
 .hero .eyebrow, .hero .hero-role, .hero .hero-role i,
-.hero .hero-meta span, .hero .overall-label, .hero .overall-card strong,
+.hero .hero-meta span, .hero .overall-label,
 .hero .overall-caption, .hero .hero-bottom { color: #000000; }
+.hero .overall-card strong { color: #1c49ab; }
 .hero h1 { color: #ffffff; }
 .section-nav { display:flex;flex-wrap:wrap;justify-content:center;gap:6px;padding:13px 0;border-bottom:1px solid var(--line); }
 .section-nav a { display:inline-flex;align-items:center;gap:7px;padding:8px 11px;color:var(--text);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap;transition:background .2s,color .2s; }

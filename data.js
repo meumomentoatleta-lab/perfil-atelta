@@ -64,12 +64,13 @@ const achievementHistory = [
 
 window.ATHLETE = {
   name: "Pietro Yamal",
-  role: "Ala / Lateral / Pivô / Meio-campo",
+  fullName: "Pietro Teixeira Rodrigues",
+  role: "Ala / Lateral / Meio-campo",
   sport: "Futsal e Futebol 7",
   club: "Náutico",
   location: "Paulista, PE",
   age: "11 anos",
-  birthDate: "15/10/2015",
+  birthYear: "2015",
   height: "140 cm",
   weight: "33 kg",
   dominantFoot: "Direito",

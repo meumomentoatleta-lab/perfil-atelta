@@ -28,7 +28,7 @@
   }
 
   const facts = [
-    ["IDADE", a.age], ["NASCIMENTO", a.birthDate], ["ALTURA / PESO", [a.height, a.weight].filter(Boolean).join(" • ")],
+    ["NOME", a.fullName], ["IDADE", a.age], ["ANO DE NASCIMENTO", a.birthYear], ["ALTURA / PESO", [a.height, a.weight].filter(Boolean).join(" • ")],
     ["PÉ DOMINANTE", a.dominantFoot], ["POSIÇÃO", a.role], ["NACIONALIDADE", a.nationality]
   ].filter(x => x[1]);
   $("quickFacts").innerHTML = facts.map(([label, value]) => `<div class="fact"><span class="fact-mark">◆</span><span><b>${label}:</b> ${value}</span></div>`).join("");
