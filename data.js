@@ -116,21 +116,21 @@ window.ATHLETE = {
   videos: [
     {
       title: "Náutico x Decisão U11 ",
-      category: "Highlights - Futsal",
+      category: "Futsal",
       duration: "02:59",
       date: "2026",
       url: " https://www.youtube.com/watch?v=W6yGVYX-ukQ",
     },
     {
       title: "Náutico x Sport U11",
-      category: "Highlights - Futsal",
+      category: "Futsal",
       duration: "03:25",
       date: "2026",
       url: "https://www.youtube.com/watch?v=NFdFnj25VEY",
     },
     {
       title: "Benfica U11 ",
-      category: "Highlights - Fut7",
+      category: "Fut7",
       duration: "05:05",
       date: "2026",
       url: "https://www.youtube.com/watch?v=gWrYzZL4HfU&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=5",
@@ -138,7 +138,7 @@ window.ATHLETE = {
     ,
     {
       title: "Benfica x GM 2 - U11",
-      category: "Highlights - Fut7",
+      category: "Fut7",
       duration: "04:13",
       date: "2026",
       url: "https://youtu.be/x7adOBlCGP0",
@@ -146,7 +146,7 @@ window.ATHLETE = {
     ,
     {
       title: "Náutico x Zenith U11",
-      category: "Highlights - Futsal",
+      category: "Futsal",
       duration: "01:21",
       date: "2026",
       url: "https://youtu.be/8BMBWjCo16U",
@@ -154,24 +154,53 @@ window.ATHLETE = {
 
     {
       title: "Benfica x Timbu - U12 ",
-      category: "Highlights - Fut7",
+      category: "Fut7",
       duration: "04:48",
       date: "2026",
       url: "https://www.youtube.com/watch?v=hNlwvrL5kq8&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=2",
     },
     {
       title: "ELO x CVI - U11 ",
-      category: "Highlights - Futsal",
+      category: "Futsal",
       duration: "01:22",
       date: "2025",
       url: "https://www.youtube.com/watch?v=VoJayuGKy8s&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=6",
     },
     {
       title: "Retrô x Vasco U9 ",
-      category: "Highlights - Futsal",
+      category: "Futsal",
       duration: "01:22",
       date: "2024",
       url: "https://www.youtube.com/shorts/n7cFFCaLrEo",
+    },
+
+    {
+      title: "Compilado de Gols ",
+      category: "Gols",
+      duration: "3:00",
+      date: "2026",
+      url: "",
+    },
+    {
+      title: "Compilado de Assistências ",
+      category: "Assistências",
+      duration: "3:00",
+      date: "2026",
+      url: "",
+    },
+    {
+      title: "Compilado de Dribles ",
+      category: "Dribles",
+      duration: "3:00",
+      date: "2026",
+      url: "",
+    },
+    {
+      title: "Compilado de marcações ",
+      category: "Marcações",
+      duration: "3:00",
+      date: "2026",
+      url: "",
     },
   ],
 };
