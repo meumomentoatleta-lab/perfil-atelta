@@ -122,14 +122,22 @@ window.ATHLETE = {
       url: " https://www.youtube.com/watch?v=W6yGVYX-ukQ",
     },
     {
+      title: "Náutico x Santa Cruz U11",
+      category: "Futsal",
+      duration: "02:14",
+      date: "2026",
+      url: "https://www.youtube.com/watch?v=JTwgtqDGXF4",
+    },
+    {
       title: "Náutico x Sport U11",
       category: "Futsal",
       duration: "03:25",
       date: "2026",
       url: "https://www.youtube.com/watch?v=NFdFnj25VEY",
     },
+
     {
-      title: "Benfica U11 ",
+      title: "Benfica x Sesc Goiana - U11 ",
       category: "Fut7",
       duration: "05:05",
       date: "2026",
@@ -142,6 +150,13 @@ window.ATHLETE = {
       duration: "04:13",
       date: "2026",
       url: "https://youtu.be/x7adOBlCGP0",
+    },
+    {
+      title: "Benfica x Almirantes - U11",
+      category: "Fut7",
+      duration: "04:39",
+      date: "2026",
+      url: "https://www.youtube.com/watch?v=ty1j0Z84q94",
     },
     ,
     {
