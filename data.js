@@ -133,9 +133,9 @@ window.ATHLETE = {
     {
       title: "Náutico x Ajax U11",
       category: "Futsal",
-      duration: "02:14",
+      duration: "01:47",
       date: "2026",
-      url: "01:47",
+      url: "https://youtu.be/Iv1HpYUJCrk?si=Vl7R7q-lAmejmprF",
     },
     {
       title: "Náutico x EJ U11",
