@@ -181,6 +181,10 @@
   function validVideoId(value) {
     return typeof value === "string" && /^[\w-]{11}$/.test(value) ? value : "";
   }
+  function getVideoYear(video) {
+    const match = String(video.date || "").match(/\b(?:19|20)\d{2}\b/);
+    return match ? match[0] : "Sem data";
+  }
   const categories = [
     "Todos",
     ...new Set(videos.map((v) => v.category).filter(Boolean)),
@@ -204,23 +208,36 @@
     renderVideos();
   });
   function renderVideos() {
-    const filtered = videos.filter(
-      (v) => activeCategory === "Todos" || v.category === activeCategory,
-    );
+    const filtered = videos
+      .filter((v) => activeCategory === "Todos" || v.category === activeCategory)
+      .map((video, index) => ({ video, index, year: getVideoYear(video) }))
+      .sort((a, b) => {
+        if (a.year !== b.year) {
+          if (a.year === "Sem data") return 1;
+          if (b.year === "Sem data") return -1;
+          return Number(b.year) - Number(a.year);
+        }
+        const aDate = Date.parse(a.video.date);
+        const bDate = Date.parse(b.video.date);
+        return (Number.isNaN(bDate) ? 0 : bDate) -
+          (Number.isNaN(aDate) ? 0 : aDate) || a.index - b.index;
+      });
     $("videoCount").textContent =
       `${filtered.length} ${filtered.length === 1 ? "VÍDEO" : "VÍDEOS"}`;
     $("videoGrid").innerHTML = filtered.length
       ? filtered
-          .map(
-            (v) => `
+          .map(({ video: v, year }, index) => {
+            const videoId = getYouTubeVideoId(v.url);
+            return `
+      ${index === 0 || filtered[index - 1].year !== year ? `<h3 class="video-year-heading">--- ${year} ---</h3>` : ""}
       <article class="video-card">
-        <button class="video-thumb" type="button" data-video-id="${getYouTubeVideoId(v.url)}" aria-label="Reproduzir: ${v.title}">
-          ${v.thumbnail ? `<img class="video-thumbnail" src="${v.thumbnail}" alt="" loading="lazy">` : getYouTubeVideoId(v.url) ? `<img class="video-thumbnail" src="https://img.youtube.com/vi/${getYouTubeVideoId(v.url)}/hqdefault.jpg" alt="" loading="lazy">` : ""}
-          <span class="video-type">${v.category || "VÍDEO"}</span><span class="play" aria-hidden="true">▶</span><span class="video-duration">${v.duration || ""}</span>
+        <button class="video-thumb" type="button" ${videoId ? `data-video-id="${videoId}"` : "disabled"} aria-label="${videoId ? `Reproduzir: ${v.title}` : `Vídeo em breve: ${v.title}`}">
+          ${v.thumbnail ? `<img class="video-thumbnail" src="${v.thumbnail}" alt="" loading="lazy">` : videoId ? `<img class="video-thumbnail" src="https://img.youtube.com/vi/${videoId}/hqdefault.jpg" alt="" loading="lazy">` : ""}
+          <span class="video-type">${v.category || "VÍDEO"}</span>${videoId ? `<span class="play" aria-hidden="true">▶</span>` : `<span class="video-coming-soon">Em breve</span>`}<span class="video-duration">${v.duration || ""}</span>
         </button>
-        <div class="video-details"><div><strong>${v.title}</strong><small>${v.date || ""}</small></div><button class="video-open" type="button" data-video-id="${getYouTubeVideoId(v.url)}">Assistir ▶</button></div>
-      </article>`,
-          )
+        <div class="video-details"><div><strong>${v.title}</strong><small>${v.date || ""}</small></div>${videoId ? `<button class="video-open" type="button" data-video-id="${videoId}">Assistir ▶</button>` : ""}</div>
+      </article>`;
+          })
           .join("")
       : `<div class="empty-videos">Nenhum vídeo cadastrado nesta categoria.</div>`;
     $("videoGrid")

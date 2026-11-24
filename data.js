@@ -114,6 +114,7 @@ window.ATHLETE = {
   ],
   allPhotosUrl: "",
   videos: [
+    /* Vídeos de Futsal*/
     {
       title: "Náutico x Decisão U11 ",
       category: "Futsal",
@@ -121,6 +122,7 @@ window.ATHLETE = {
       date: "2026",
       url: " https://www.youtube.com/watch?v=W6yGVYX-ukQ",
     },
+
     {
       title: "Náutico x Santa Cruz U11",
       category: "Futsal",
@@ -129,13 +131,85 @@ window.ATHLETE = {
       url: "https://www.youtube.com/watch?v=JTwgtqDGXF4",
     },
     {
+      title: "Náutico x Ajax U11",
+      category: "Futsal",
+      duration: "02:14",
+      date: "2026",
+      url: "01:47",
+    },
+    {
+      title: "Náutico x EJ U11",
+      category: "Futsal",
+      duration: "01:05",
+      date: "2026",
+      url: "https://youtu.be/-jq9OY_Xy90",
+    },
+    {
       title: "Náutico x Sport U11",
       category: "Futsal",
       duration: "03:25",
       date: "2026",
       url: "https://www.youtube.com/watch?v=NFdFnj25VEY",
     },
+    {
+      title: "Náutico x Capibaribe U11",
+      category: "Futsal",
+      duration: "00:56",
+      date: "2026",
+      url: "https://youtube.com/shorts/HaZ5vxW5aBM",
+    },
+    {
+      title: "Náutico x Zenith U11 (Amistoso)",
+      category: "Futsal",
+      duration: "",
+      date: "2026",
+      url: "https://youtube.com/shorts/1aK7BSaBdM0",
+    },
 
+    {
+      title: "Náutico x Zenith U11",
+      category: "Futsal",
+      duration: "01:21",
+      date: "2026",
+      url: "https://youtu.be/8BMBWjCo16U",
+    },
+    {
+      title: "Náutico U10 - Copa Tronadon de Base 2025",
+      category: "Futsal",
+      duration: "01:22",
+      date: "2025",
+      url: "https://www.youtube.com/watch?v=VDRp2_NFYSQ",
+    },
+    {
+      title: "ELO x CVI - U11 ",
+      category: "Futsal",
+      duration: "01:22",
+      date: "2025",
+      url: "https://www.youtube.com/watch?v=VoJayuGKy8s&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=6",
+    },
+    {
+      title: "ELO x CSE - U11 ",
+      category: "Futsal",
+      duration: "01:22",
+      date: "2025",
+      url: "https://youtu.be/O-NbRus6jzQ",
+    },
+    {
+      title: "Náutico x B5 - U10 ",
+      category: "Futsal",
+      duration: "01:22",
+      date: "2025",
+      url: "",
+    },
+    {
+      title: "Retrô x Vasco U9 ",
+      category: "Futsal",
+      duration: "01:22",
+      date: "2024",
+      url: "https://www.youtube.com/shorts/n7cFFCaLrEo",
+    },
+
+    /* Vídeos de futebol 7 */
     {
       title: "Benfica x Sesc Goiana - U11 ",
       category: "Fut7",
@@ -143,7 +217,7 @@ window.ATHLETE = {
       date: "2026",
       url: "https://www.youtube.com/watch?v=gWrYzZL4HfU&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=5",
     },
-    ,
+
     {
       title: "Benfica x GM 2 - U11",
       category: "Fut7",
@@ -158,14 +232,6 @@ window.ATHLETE = {
       date: "2026",
       url: "https://www.youtube.com/watch?v=ty1j0Z84q94",
     },
-    ,
-    {
-      title: "Náutico x Zenith U11",
-      category: "Futsal",
-      duration: "01:21",
-      date: "2026",
-      url: "https://youtu.be/8BMBWjCo16U",
-    },
 
     {
       title: "Benfica x Timbu - U12 ",
@@ -175,44 +241,70 @@ window.ATHLETE = {
       url: "https://www.youtube.com/watch?v=hNlwvrL5kq8&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=2",
     },
     {
-      title: "ELO x CVI - U11 ",
-      category: "Futsal",
-      duration: "01:22",
+      title: "Fera -Amistoso - U12 ",
+      category: "Fut7",
+      duration: "02:16",
       date: "2025",
-      url: "https://www.youtube.com/watch?v=VoJayuGKy8s&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=6",
+      url: "https://youtube.com/shorts/Cp5XiQrnKQw",
     },
+
+    /* Vídeos de Futvolei*/
+
     {
-      title: "Retrô x Vasco U9 ",
-      category: "Futsal",
-      duration: "01:22",
-      date: "2024",
-      url: "https://www.youtube.com/shorts/n7cFFCaLrEo",
+      title: "Treino de Futvolei - Filipinho",
+      category: "Futvolei",
+      duration: "1:08",
+      date: "2026",
+      url: "https://youtube.com/shorts/Bh41Km37fHo",
     },
 
     {
+      title: "Treino de Futvolei - Royal",
+      category: "Futvolei",
+      duration: "1:34",
+      date: "2026",
+      url: "https://youtube.com/shorts/CgJD71PERTU",
+    },
+    /* Vídeos de Treinos */
+    {
+      title: "Treino Náutico U11",
+      category: "Treinos",
+      duration: "01:40",
+      date: "2026",
+      url: "https://youtube.com/shorts/h3ipN5IoGyo",
+    },
+    {
+      title: "Treino Náutico U11",
+      category: "Treinos",
+      duration: "01:59",
+      date: "2026",
+      url: "",
+    },
+    /* Compilados */
+    {
       title: "Compilado de Gols ",
-      category: "Gols",
+      category: "Compilados",
       duration: "3:00",
       date: "2026",
       url: "",
     },
     {
       title: "Compilado de Assistências ",
-      category: "Assistências",
+      category: "Compilados",
       duration: "3:00",
       date: "2026",
       url: "",
     },
     {
       title: "Compilado de Dribles ",
-      category: "Dribles",
+      category: "Compilados",
       duration: "3:00",
       date: "2026",
       url: "",
     },
     {
-      title: "Compilado de marcações ",
-      category: "Marcações",
+      title: "Compilado de Ações Defensivas ",
+      category: "Compilados",
       duration: "3:00",
       date: "2026",
       url: "",
