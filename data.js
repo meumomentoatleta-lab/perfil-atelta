@@ -178,7 +178,7 @@ window.ATHLETE = {
       category: "Futsal",
       duration: "01:22",
       date: "2025",
-      url: "https://www.youtube.com/watch?v=VDRp2_NFYSQ",
+      url: "",
     },
     {
       title: "ELO x CVI - U11 ",
