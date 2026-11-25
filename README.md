@@ -1,4 +1,4 @@
-# Perfil do Atleta — Momento Atleta
+# Perfil do Atleta — Perfil Atleta
 
 Página responsiva de currículo esportivo em HTML, CSS e JavaScript puro.
 

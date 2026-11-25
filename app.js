@@ -22,9 +22,7 @@
     "Adicione uma apresentação para este atleta.",
   );
   $("year").textContent = new Date().getFullYear();
-  $("contactButton").href = a.email ? `mailto:${a.email}` : "#";
-  $("instagramLink").href = safe(a.instagram, "#");
-  $("instagramLink").textContent = `${safe(a.instagramLabel, "Instagram")} ↗`;
+  $("contactButton").href = safe(a.instagram, "#");
   $("allPhotosLink").href = safe(a.allPhotosUrl, "#");
   if (!a.allPhotosUrl)
     $("allPhotosLink").addEventListener("click", (e) => {
@@ -106,7 +104,7 @@
         `<button class="gallery-item" type="button" data-index="${i}" aria-label="Abrir foto: ${item.caption || "Atleta"}">${
           item.image
             ? `<img src="${item.image}" alt="${item.caption || "Foto do atleta"}" loading="lazy">`
-            : `<div class="gallery-placeholder">MA<span>${safe(a.name, "ATLETA")
+            : `<div class="gallery-placeholder">PA<span>${safe(a.name, "ATLETA")
                 .split(" ")
                 .map((w) => w[0])
                 .slice(0, 2)

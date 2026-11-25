@@ -77,8 +77,7 @@ window.ATHLETE = {
   shirtNumber: "20",
   nationality: "Brasileiro",
   email: "",
-  instagram: "",
-  instagramLabel: "Instagram",
+  instagram: "https://www.instagram.com/pietro_yamal/",
   bio: "Atleta de Futsal e Futebol 7, atuando como Ala/Lateral esquerdo pelo futsal do Náutico. Destaca-se pela velocidade, agilidade, coordenação motora e capacidade de organizar as jogadas, com preferência por assistências, finalizações e controle de bola.",
   strengths: [
     "Velocidade",
@@ -165,6 +164,13 @@ window.ATHLETE = {
       date: "2026",
       url: "https://youtube.com/shorts/1aK7BSaBdM0",
     },
+    {
+      title: "Náutico x TS U11",
+      category: "Futsal",
+      duration: "01:05",
+      date: "2026",
+      url: "https://youtube.com/shorts/rWSGBZsC5fg",
+    },
 
     {
       title: "Náutico x Zenith U11",
@@ -174,12 +180,13 @@ window.ATHLETE = {
       url: "https://youtu.be/8BMBWjCo16U",
     },
     {
-      title: "Náutico U10 - Copa Tronadon de Base 2025",
+      title: "Highlights Náutico U10 - Copa Tronadon",
       category: "Futsal",
-      duration: "01:22",
+      duration: "01:54",
       date: "2025",
-      url: "",
+      url: "https://youtu.be/O_p5qcEfGZA",
     },
+
     {
       title: "ELO x CVI - U11 ",
       category: "Futsal",
@@ -201,6 +208,14 @@ window.ATHLETE = {
       date: "2025",
       url: "",
     },
+    ,
+    {
+      title: "Náutico x SP Soccer - U10",
+      category: "Futsal",
+      duration: "00:29",
+      date: "2025",
+      url: "https://youtu.be/8gRnJsGQCOQ",
+    },
     {
       title: "Retrô x Vasco U9 ",
       category: "Futsal",
@@ -211,11 +226,25 @@ window.ATHLETE = {
 
     /* Vídeos de futebol 7 */
     {
+      title: "Benfica x Santa Cruz - U11 ",
+      category: "Fut7",
+      duration: "",
+      date: "2026",
+      url: "",
+    },
+    {
       title: "Benfica x Sesc Goiana - U11 ",
       category: "Fut7",
       duration: "05:05",
       date: "2026",
       url: "https://www.youtube.com/watch?v=gWrYzZL4HfU&list=PLvuDTxVHGwy7pdwIuVGe3VIn1VdHPRf6J&index=5",
+    },
+    {
+      title: "Benfica x Capibaribe - U11 ",
+      category: "Fut7",
+      duration: ":01:14",
+      date: "2026",
+      url: "https://youtube.com/shorts/gsN2J3MEGhw",
     },
 
     {
@@ -269,16 +298,16 @@ window.ATHLETE = {
     {
       title: "Treino Náutico U11",
       category: "Treinos",
-      duration: "01:40",
+      duration: "02:00",
       date: "2026",
-      url: "https://youtube.com/shorts/h3ipN5IoGyo",
+      url: "https://youtube.com/shorts/YKXXxmYaIqc",
     },
     {
       title: "Treino Náutico U11",
       category: "Treinos",
-      duration: "01:59",
+      duration: "01:40",
       date: "2026",
-      url: "",
+      url: "https://youtube.com/shorts/h3ipN5IoGyo",
     },
     /* Compilados */
     {
