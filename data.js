@@ -91,6 +91,7 @@ window.ATHLETE = {
   updated: "ATUALIZADO EM 19/11/2026",
   heroImage: "images/capa.png",
   portraitImage: "images/3x4.jpg",
+  shareImage: "images/3x4.jpg",
   attributes: [
     { name: "Finalização", value: 60, groups: ["attack"] },
     { name: "Velocidade", value: 85, groups: ["attack", "defense"] },

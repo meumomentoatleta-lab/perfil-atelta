@@ -3,7 +3,40 @@
   const $ = (id) => document.getElementById(id);
   const safe = (value, fallback = "") => value || fallback;
 
-  document.title = `${safe(a.name, "Atleta")} | Perfil do Atleta`;
+  const athleteName = safe(a.name, "Atleta");
+  const profileTitle = `${athleteName} | Perfil do Atleta`;
+  const profileDescription = safe(
+    a.bio,
+    "Conheça o perfil esportivo do atleta.",
+  );
+  document.title = profileTitle;
+  const setMeta = (selector, attribute, value) => {
+    const meta = document.querySelector(selector);
+    if (meta) meta.setAttribute(attribute, value);
+  };
+  setMeta('meta[name="description"]', "content", `Perfil esportivo de ${athleteName}. Currículo, características, conquistas, fotos e vídeos.`);
+  setMeta('meta[property="og:title"]', "content", profileTitle);
+  setMeta('meta[property="og:description"]', "content", profileDescription);
+  setMeta('meta[name="twitter:title"]', "content", profileTitle);
+  setMeta('meta[name="twitter:description"]', "content", profileDescription);
+  setMeta('meta[property="og:image:alt"]', "content", `Foto de perfil de ${athleteName}`);
+
+  const shareImage = safe(a.shareImage, a.portraitImage, "");
+  if (shareImage) {
+    const absoluteImageUrl = /^https?:\/\//i.test(shareImage)
+      ? shareImage
+      : /^https?:\/\//i.test(location.href)
+        ? new URL(shareImage, location.href).href
+        : shareImage;
+    setMeta('meta[property="og:image"]', "content", absoluteImageUrl);
+    setMeta('meta[property="og:image:secure_url"]', "content", absoluteImageUrl);
+    setMeta('meta[name="twitter:image"]', "content", absoluteImageUrl);
+  }
+  if (/^https?:\/\//i.test(location.href)) {
+    setMeta('meta[property="og:url"]', "content", location.href);
+  } else {
+    setMeta('meta[property="og:url"]', "content", "");
+  }
   $("athleteName").textContent = safe(a.name, "NOME DO ATLETA").toUpperCase();
   $("athleteRole").innerHTML =
     `${safe(a.role, "Atleta").toUpperCase()} <i>•</i> ${safe(a.sport, "Esporte").toUpperCase()}`;
