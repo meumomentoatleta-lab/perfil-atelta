@@ -78,7 +78,7 @@ window.ATHLETE = {
   nationality: "Brasileiro",
   email: "",
   instagram: "https://www.instagram.com/pietro_yamal/",
-  bio: "Atleta de Futsal e Futebol 7, atuando como Ala/Lateral esquerdo pelo futsal do Náutico. Destaca-se pela velocidade, agilidade, coordenação motora e capacidade de organizar as jogadas, com preferência por assistências, finalizações e controle de bola.",
+  bio: "Atleta de Futsal e Futebol 7, atuando como Ala/Lateral pelo futsal do Náutico. Destaca-se pela velocidade, agilidade, coordenação motora e capacidade de organizar as jogadas, com preferência por assistências, finalizações e controle de bola.",
   strengths: [
     "Velocidade",
     "Resistência",
@@ -298,16 +298,23 @@ window.ATHLETE = {
     {
       title: "Treino Náutico U11",
       category: "Treinos",
-      duration: "02:00",
+      duration: "01:40",
       date: "2026",
-      url: "https://youtube.com/shorts/YKXXxmYaIqc",
+      url: "https://youtube.com/shorts/h3ipN5IoGyo",
+    },
+    {
+      title: "Físico",
+      category: "Treinos",
+      duration: "01:34",
+      date: "2026",
+      url: "https://youtube.com/shorts/X00HSGlytCQ",
     },
     {
       title: "Treino Náutico U11",
       category: "Treinos",
-      duration: "01:40",
+      duration: "02:00",
       date: "2026",
-      url: "https://youtube.com/shorts/h3ipN5IoGyo",
+      url: "https://www.youtube.com/shorts/YKXXxmYaIqc",
     },
     /* Compilados */
     {
